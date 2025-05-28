@@ -1,11 +1,11 @@
-import Navbar from "@/components/modules/Navbar";
-import Carousel from "@/components/templates/index/Carousel";
+import Footer from "@/components/modules/Footer/Footer";
+import Slider from "@/components/templates/Index/Slider";
 
 export default function Home() {
   return (
     <>
-    <Navbar/>
-    <Carousel/>
+    <Slider/>
+    <Footer/>
     </>
   );
 }
