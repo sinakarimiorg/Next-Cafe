@@ -7,8 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
 
 function ServiceItem({img, icon, title, desc}) {
-  {console.log(icon);
-  }
   return (
     <div class="col-lg-6 mb-5">
       <div class="row align-items-center">
