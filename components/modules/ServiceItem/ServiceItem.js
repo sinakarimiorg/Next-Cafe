@@ -4,7 +4,6 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
 config.autoAddCss = false;
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faTruck, faTable } from "@fortawesome/free-solid-svg-icons";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
 
 function ServiceItem({img, icon, title, desc}) {
@@ -35,7 +34,6 @@ function ServiceItem({img, icon, title, desc}) {
               }}
             >
               <FontAwesomeIcon
-                // icon={faTruck}
                 icon={Icons[icon]}
                 style={{ fontSize: "1rem", margin: "0,auto" }}
               />
