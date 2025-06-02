@@ -1,4 +1,5 @@
 import About from "@/components/templates/Index/About";
+import Menu from "@/components/templates/Index/Menu";
 import Offer from "@/components/templates/Index/Offer";
 import Services from "@/components/templates/Index/Services";
 import Slider from "@/components/templates/Index/Slider";
@@ -10,6 +11,7 @@ function Index({ data }) {
       <About />
       <Services services={data.services} />
       <Offer />
+      <Menu/>
     </>
   );
 }
