@@ -4,6 +4,7 @@ import Offer from "@/components/templates/Index/Offer";
 import Reservation from "@/components/templates/Index/reservation";
 import Services from "@/components/templates/Index/Services";
 import Slider from "@/components/templates/Index/Slider";
+import Testimonials from "@/components/templates/Index/Testimonials";
 
 function Index({ data }) {
   return (
@@ -14,6 +15,7 @@ function Index({ data }) {
       <Offer />
       <Menu menu={data.menu} />
       <Reservation />
+      <Testimonials data={data.comments} />
     </>
   );
 }
@@ -26,6 +28,9 @@ export async function getStaticProps() {
   const menuResponse = await fetch("http://localhost:4000/menu")
   const menuData = await menuResponse.json()
 
+  const commentsResponse = await fetch("http://localhost:4000/comments")
+  const commentsData = await commentsResponse.json()
+
   console.log(menuData);
 
   return {
@@ -33,8 +38,10 @@ export async function getStaticProps() {
       data: {
         services: servicesData,
         menu: menuData,
+        comments: commentsData,
       }
-    }
+    },
+    revalidate: 60 * 60 * 12
   }
 }
 
