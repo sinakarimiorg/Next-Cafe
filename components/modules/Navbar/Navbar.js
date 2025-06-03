@@ -56,8 +56,8 @@ function Navbar() {
                 <Link href="/reservation" className={`${styles.dropdown_item}`}>
                   Reservation
                 </Link>
-                <Link href="/testimonial" className={`${styles.dropdown_item}`}>
-                  Testimonial
+                <Link href="/testimonials" className={`${styles.dropdown_item}`}>
+                  Testimonials
                 </Link>
               </div>
             </div>

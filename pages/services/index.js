@@ -5,7 +5,7 @@ import React from 'react'
 export default function index({services}) {
   return (
     <>
-      <PageHeader route="About" />
+      <PageHeader route="services" />
       <ServicesDetails data={services} />
     </>
   );
