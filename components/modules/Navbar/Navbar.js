@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "@/styles/Navbar.module.css";
+import Link from "next/link";
 
 function Navbar() {
   return (
@@ -22,42 +23,48 @@ function Navbar() {
           class={`collapse ${styles.navbar_collapse} justify-content-between`}
           id="navbarCollapse"
         >
-          <div class={`${styles.navbar_nav} ml-auto p-4`}>
-            <a
-              href="index.html"
-              class={`${styles.nav_link} ${styles.active_nav_link}`}
+          <div className={`${styles.navbar_nav} ml-auto p-4`}>
+            <Link
+              href="/"
+              className={`${styles.nav_link} ${styles.active_nav_link}`}
             >
               Home
-            </a>
-            <a href="about.html" class={`${styles.nav_link}`}>
+            </Link>
+
+            <Link href="/about" className={`${styles.nav_link}`}>
               About
-            </a>
-            <a href="service.html" class={`${styles.nav_link}`}>
-              Service
-            </a>
-            <a href="menu.html" class={`${styles.nav_link}`}>
+            </Link>
+            <Link href="/services" className={`${styles.nav_link}`}>
+              Services
+            </Link>
+            <Link href="/menu" className={`${styles.nav_link}`}>
               Menu
-            </a>
-            <div class={`${styles.dropdown}`}>
+            </Link>
+
+            <div className={`${styles.dropdown}`}>
               <a
                 href="#"
-                class={`${styles.nav_link} ${styles.dropdown_toggle}`}
+                className={`${styles.nav_link} ${styles.dropdown_toggle}`}
                 data-toggle="dropdown"
               >
                 Pages
               </a>
-              <div class={`${styles.dropdown_menu} ${styles.text_capitalize}`}>
-                <a href="reservation.html" class={`${styles.dropdown_item}`}>
+
+              <div
+                className={`${styles.dropdown_menu} ${styles.text_capitalize}`}
+              >
+                <Link href="/reservation" className={`${styles.dropdown_item}`}>
                   Reservation
-                </a>
-                <a href="testimonial.html" class={`${styles.dropdown_item}`}>
+                </Link>
+                <Link href="/testimonial" className={`${styles.dropdown_item}`}>
                   Testimonial
-                </a>
+                </Link>
               </div>
             </div>
-            <a href="contact.html" class={`${styles.nav_link}`}>
+
+            <Link href="/contact" className={`${styles.nav_link}`}>
               Contact
-            </a>
+            </Link>
           </div>
         </div>
       </nav>

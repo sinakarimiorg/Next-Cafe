@@ -1,7 +1,12 @@
+import PageHeader from '@/components/modules/PageHeader/PageHeader';
+import Story from '@/components/templates/About/Story';
 import React from 'react'
 
-export default function index() {
+export default function About() {
   return (
-    <div>about</div>
-  )
+    <>
+      <PageHeader route="About" />
+      <Story />
+    </>
+  );
 }
